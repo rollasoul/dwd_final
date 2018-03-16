@@ -1,5 +1,6 @@
 [![crypto_smiles](https://github.com/rollasoul/dwd_final/blob/master/crypto_smiles.png?raw=true)](https://vimeo.com/258816720)
 
+(click on image to play video on vimeo)
 
 # crypto-smiles
 
