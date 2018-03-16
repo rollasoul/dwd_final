@@ -13,7 +13,7 @@ general prerequisites:
 - webcam
 - browser with metamask installed (ethereum wallet as chrome extension), running on ropsten testnet
 
-# install and run server side
+# run pi and server side
 
 
 - run on pi: node script reads changes on a specific contract, stores them in db, python script reads changes and triggers servo
