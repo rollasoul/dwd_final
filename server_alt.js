@@ -1,7 +1,7 @@
 // the other side of our modfified chatroom/DIY streaming service, serving on an alternative page to audience  
 
 var https = require('https');
-var fs = require('fs'); // Using the filesystem module
+var fs = require('fs');
 var url =  require('url');
 
 var options = {
