@@ -29,6 +29,6 @@ general prerequisites:
   node server_alt.js
   ```
 
-- point computer with webcam to servo/smiley face on "yourwebsite@server.com:12344/index_alt.html"
-- access the stream and the metamask payment interface via "yourwebsite@server.com:3000/index.html", 
+- point computer with webcam to servo/smiley face on "yourwebsite.com:12344/index_alt.html"
+- access the stream and the metamask payment interface via "yourwebsite.com:3000/index.html", 
   copy wallet address, submit a (fake ethereum) payment on metamask in ropsten-testnet, watch the smiley-face come up in the webcam
