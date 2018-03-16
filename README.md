@@ -7,7 +7,7 @@ This a collection of scripts that (run together) set up a physical blockchain pa
 
 general prerequisites:
 
-- remote server
+- remote server with https-certificate and domain
 - raspberry pi with python 2 and wiringpi installed
   (+ servo)
 - webcam
