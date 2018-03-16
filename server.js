@@ -1,4 +1,4 @@
-based on the simpleWebRTC examples on https://github.com/andyet/SimpleWebRTC
+//based on the simpleWebRTC examples on https://github.com/andyet/SimpleWebRTC
 
 var https = require('https');
 var fs = require('fs');
