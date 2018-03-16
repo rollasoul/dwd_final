@@ -1,0 +1,52 @@
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://simplewebrtc.com/latest-v2.js"></script>
+<script>
+    function myClick()
+        {
+        var url = 'script.php'; //put the url for the php
+        $.post(url, {});
+        }
+    $("document").ready(
+        function()
+        {
+            setInterval(
+                function()
+                {
+                    $("#theDiv").load('script.php');
+                },
+                500
+            );
+        }
+    );
+
+var webrtc = new SimpleWebRTC({
+  // the id/element dom element that will hold "our" video
+  localVideoEl: 'localVideo',
+  // the id/element dom element that will hold remote videos
+  remoteVideosEl: 'remotesVideos',
+  // immediately ask for camera access
+  autoRequestMedia: true
+});
+
+// we have to wait until it's ready
+webrtc.on('readyToCall', function () {
+  // you can name it anything
+  webrtc.joinRoom('special ITP room');
+});
+
+// display camera stream and smiley-face
+</script>
+<html>
+<head> </head>
+<center><h2></h2></center>
+<br>
+<center>
+<br>
+<br>
+        <div id="localVideo"></div>
+<br>
+<br>
+<center>
+<div id="theDiv"></div>
+<!-- <input type="button" value="make some noise" onclick="myClick()"> -->
+</center>
