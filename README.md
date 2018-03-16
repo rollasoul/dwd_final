@@ -12,7 +12,7 @@ general prerequisites:
 - raspberry pi with python 2 and wiringpi installed
   (+ servo)
 - webcam
-- browser with metamask installed (ethereum wallet as chrome extension), running on ropsten testnet
+- browser with metamask installed (ethereum wallet as chrome extension) or any other ethereum wallet, running on ropsten testnet
 
 # run pi and server side
 
