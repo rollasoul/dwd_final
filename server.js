@@ -10,7 +10,7 @@ var options = {
   cert: fs.readFileSync('my-cert.pem')
 };
 
-//steup path for users that watch stream
+//setup path for users that watch stream on index.html (streaming from index_alt.html)
 function handleIt(req, res) {
         var parsedUrl = url.parse(req.url);
 
