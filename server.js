@@ -1,6 +1,5 @@
 based on the simpleWebRTC examples on https://github.com/andyet/SimpleWebRTC
 
-//setup https (needed for getusermedia camnera input)
 var https = require('https');
 var fs = require('fs');
 var url =  require('url');
