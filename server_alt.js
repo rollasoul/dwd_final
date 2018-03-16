@@ -1,13 +1,17 @@
-// the other side of our modfified chatroom/DIY streaming service, serving on an alternative page to audience  
+// the serving/streaming side of our modfified chatroom/DIY streaming service,
+// accessing the chatroom via getusermedia on index_alt.html, serving/streaming on index.html to audience  
 
 var https = require('https');
 var fs = require('fs');
 var url =  require('url');
 
+//change this to your own keys/certs for https (needed for getusermedia)
 var options = {
   key: fs.readFileSync('my-key.pem'),
   cert: fs.readFileSync('my-cert.pem')
 };
+
+//setup path (on index_alt.html) for physical interface (camera/smiley-face/servo in real location) streaming camera feed on index.html
 
 function handleIt(req, res) {
         var parsedUrl = url.parse(req.url);
