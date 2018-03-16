@@ -1,3 +1,8 @@
+// blockchain contract created a new token/currency called 'mother-token' based on Ethereum, runs on blcokchain
+// node interfacing with the blockchain via infura and metamask
+// contract running on the chain, this script reads changes in contract
+// changes get stored in db-file (and continuously checked by python script that triggers servo if changes occur)
+
 console.log("let's start digging in the blockchain");
 // we are using web3js as frontend
 web3 = require("web3");
@@ -15,7 +20,7 @@ c = read_motherToken.eth.contract([ { "constant": true, "inputs": [], "name": "n
 i = c.at("0x9ef7d4D025E36a2e40b24e078d2F5F3bd3135e51");
 
 setInterval(checker, 3000);
-// check Name of contract
+// check Name of contract, save value to database on Raspberry Pi
 function checker (){
     if (i.name() == 'mother_token') {
   	console.log("mother_token left:");
