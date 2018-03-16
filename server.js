@@ -4,13 +4,13 @@ var https = require('https');
 var fs = require('fs');
 var url =  require('url');
 
-//change the https keys/cert to your own
+//change the https keys/cert to your own (we modify the chatroom ...)
 var options = {
   key: fs.readFileSync('my-key.pem'),
   cert: fs.readFileSync('my-cert.pem')
 };
 
-//setup path for physical interface (camera/smiley-face/servo in real location) streaming camera feed on index.html
+//steup path for users that watch stream
 function handleIt(req, res) {
         var parsedUrl = url.parse(req.url);
 
