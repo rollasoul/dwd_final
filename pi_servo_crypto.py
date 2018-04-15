@@ -19,25 +19,24 @@ wiringpi.pwmSetRange(2000)
 
 delay_period = 0.01
 souls_old = 0;
+souls = 0;
 
 while True:
         with open('data.db') as f:
-                souls = f.readlines(0)
-        		try:
-                	souls = float(souls[0].replace('"',""))
-                	print("souls: %s" % (souls))
-                	if souls_old < souls:
-                    	for i in range(0, 1):
-                        	i = i + 1
-                        	for pulse in range(50, 250, 1):
-                                	wiringpi.pwmWrite(18, pulse)
-                                	time.sleep(delay_period*souls/10000)
-        			        time.sleep(4)
-                        	for pulse in range(250, 50, -1):
-                                	wiringpi.pwmWrite(18, pulse)
-                               		time.sleep(delay_period*souls/10000)
-        		except IndexError:
-        			var_exists = False
-		        souls_old = souls
-        f.close
+            souls = f.readlines(0)
+            try:
+                souls = float(souls[0].replace('"',""))
+            except (IndexError):
+                var_exists = False
+            print("souls: %s" % (souls))
+            if souls_old < souls:
+                for pulse in range(50, 250, 1):
+                    wiringpi.pwmWrite(18, pulse)
+                    time.sleep(delay_period)
+                    #time.sleep(2)
+                for pulse in range(250, 50, -1):
+                    wiringpi.pwmWrite(18, pulse)
+                    time.sleep(delay_period)
+            souls_old = souls
+            f.close
         time.sleep(2)
